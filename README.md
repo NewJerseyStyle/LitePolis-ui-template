@@ -91,8 +91,8 @@ show_notifications = None
 if "PYTEST_CURRENT_TEST" not in os.environ and "PYTEST_VERSION" not in os.environ:
     # NOT running under Pytest: Fetch from live source (replace with actual logic)
     print("Fetching configuration from live LitePolis...")
-    refresh_interval = get_config("litepolis-ui-my-awesome-ui", "ui_refresh_interval")
-    show_notifications = get_config("litepolis-ui-my-awesome-ui", "show_notifications")
+    refresh_interval = get_config("litepolis_ui_my_awesome_ui", "ui_refresh_interval")
+    show_notifications = get_config("litepolis_ui_my_awesome_ui", "show_notifications")
 else:
     # Running under Pytest: Use default test values
     print("Running under Pytest. Using default test configuration.")
