@@ -6,22 +6,23 @@ This template helps you kickstart the creation of user interface modules for the
 
 ## Setting Up Your UI Module
 
-### 1. Configuring Your Package Metadata (`setup.py`)
+### 1. Configuring Your Package Metadata (`pyproject.toml`)
 
-The `setup.py` file contains vital information about your UI module. You'll need to customize it to reflect your project.
+```toml
+[project]
+name = "litepolis-ui-template"
+version = "0.0.1"
+authors = [
+    { name = "Your name" },
+]
+description = "The user interface template module for LitePolis"
+dependencies = [
+    "fastapi",
+    "litepolis",
+]
 
-```python
-from setuptools import setup, find_packages
-
-setup(
-    name='litepolis-ui-my-awesome-ui',                  # Replace with your unique name
-    version='0.1.0',
-    description='A fantastic UI module for LitePolis.', # change
-    author='Your Name',                                 # change
-    url='https://github.com/your-username/litepolis-ui-my-awesome-ui', # change
-    packages=find_packages(),
-    # ... other configurations
-)
+[project.urls]
+Homepage = "https://github.com/change-to-your-repo"
 ```
 
 ### 2. Implementing Your UI Logic (`litepolis_ui_template/core.py`)
@@ -142,7 +143,7 @@ If you are developing your UI using React.js, you will need to convert your Reac
    │       └── ... (other static assets)
    ├── tests/
    │   └── test_core.py
-   └── setup.py
+   └── pyproject.toml
    ```
 
 **3. Configure FastAPI to Serve Your Static Files:**
